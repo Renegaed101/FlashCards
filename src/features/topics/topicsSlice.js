@@ -10,7 +10,7 @@ const topicsSlice = createSlice({
             state.topics[action.payload.id] = {...action.payload,quizIds: []};
         } ,
         addQuizIdToTopic: (state,action) => {
-            state.topics[action.payload.topicId].quizIds.append(action.payload.quizId);
+            state.topics[action.payload.topicId].quizIds.push(action.payload.quizId);
         }
         
     }
