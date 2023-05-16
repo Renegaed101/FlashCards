@@ -5,7 +5,7 @@ import ROUTES from "../app/routes";
 import { useSelector, useDispatch } from "react-redux";
 import { selectTopics } from "../features/topics/topicsSlice";
 import { addQuizThunk } from "../features/quizzes/quizzesSlice";
-
+import { addCard } from "../features/cards/cardsSlice";
 
 export default function NewQuizForm() {
   const [name, setName] = useState("");
@@ -24,6 +24,12 @@ export default function NewQuizForm() {
     const cardIds = [];
 
     // create the new cards here and add each card's id to cardIds
+    for (let i = 0; i < cards.length; i++) {
+      const cardId = uuidv4();
+      dispatch(addCard({...cards[i],id: cardId}));
+      cardIds.push(cardId);
+
+    }
     // create the new quiz here
     dispatch(addQuizThunk({id: uuidv4(), name: name, topicId: topicId, cardIds: cardIds}));
 
