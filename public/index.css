@@ -1,6 +1,7 @@
 * {
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 html,
@@ -8,8 +9,9 @@ body {
   margin: 0;
 }
 
+
 nav {
-  background: #b736ff;
+  background: #333;
   display: flex;
   padding: 24px 36px;
 }
@@ -28,13 +30,22 @@ nav ul li {
 }
 
 nav a {
-  color: white;
-  font-size: 16px;
-  text-decoration: none;
+  background: #333;
+  color: #fff;
+  padding: 20px 200px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none 
 }
 
 nav a.active {
   font-weight: bold;
+}
+
+nav a:hover {
+  background: #ff4b2b;
 }
 
 h1 {
@@ -62,6 +73,13 @@ button,
   color: #03a8d8;
   padding: 10px 21px;
   text-decoration: none;
+  transition: background 0.3s ease;
+  cursor:pointer;
+}
+
+.button:hover {
+  color: #fff;
+  background: #03a8d8;  
 }
 
 .create-new-topic-button {
@@ -78,7 +96,7 @@ input,
 select {
   background: #ffffff;
   border: 1px solid #979797;
-  border-radius: 3px;
+  border-radius: 15px;
   padding: 8px 10px;
   width: 100%;
   margin-bottom: 16px;
@@ -95,7 +113,7 @@ input::placeholder {
   padding-bottom: 30px;
 }
 
-.center {
+.center,#center {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -140,9 +158,20 @@ option {
 
 .topic {
   background: #ffffff;
-  border: 1px solid #bcbcbc;
-  border-radius: 3px;
-  padding: 26px 20px;
+  border: 1px solid #ff4b2b;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #03a8d8;
+  padding: 10px 21px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.topic:hover {
+
+  background: #ff4b2b;  
 }
 
 .topic-container {
@@ -185,17 +214,21 @@ li:not(:last-child) {
 }
 
 .quiz {
-  font-weight: bold;
-  font-size: 14px;
-  color: #000000;
-  padding: 25px 6px;
   background: #ffffff;
-  border: 1px solid #bcbcbc;
-  border-radius: 3px;
-  width: 88px;
+  border: 1px solid #ff4b2b;
+  border-radius: 10px;
   text-align: center;
-  margin: 0 !important;
+  font-weight: bold;
+  font-size: 24px;
+  color: #ff4b2b;
+  padding: 50px 50px;
   text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.quiz:hover {
+  color: #fff;
+  background: #ff4b2b;  
 }
 
 .quiz > a {
@@ -209,10 +242,15 @@ li:not(:last-child) {
 }
 
 .card {
-  background: #b736ff;
-  border-radius: 4px;
+  background: #333;
+  color: #fff;
+  padding: 80px 20px;
+  border-radius: 5px;
   border: none;
-  color: white;
-  padding: 73px 44px;
-  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card:hover {
+  background: #ff4b2b;
 }

@@ -21,6 +21,11 @@ export default function NewQuizForm() {
       return;
     }
 
+    if (topicId == "") {
+      window.alert("Add a topic first");
+      return;
+    }
+
     const cardIds = [];
 
     // create the new cards here and add each card's id to cardIds
@@ -103,8 +108,8 @@ export default function NewQuizForm() {
           </div>
         ))}
         <div className="actions-container">
-          <button onClick={addCardInputs}>Add a Card</button>
-          <button>Create Quiz</button>
+          <button className="button" onClick={addCardInputs}>Add a Card</button>
+          <button className="button">Create Quiz</button>
         </div>
       </form>
     </section>

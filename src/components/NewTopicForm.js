@@ -50,7 +50,7 @@ export default function NewTopicForm() {
             ))}
           </select>
         </div>
-        <button className="center">Add Topic</button>
+        <button className="button" id="center">Add Topic</button>
       </form>
     </section>
   );
